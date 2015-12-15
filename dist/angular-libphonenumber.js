@@ -114,9 +114,9 @@ angular.module('cwill747.phonenumber', [])
         }
 
         ctrl.$formatters.push(formatter);
-        ctrl.$formatters.push(validator);
+        //ctrl.$formatters.push(validator);
         ctrl.$parsers.push(parser);
-        ctrl.$parsers.push(validator);
+        //ctrl.$parsers.push(validator);
       }
     };
 
