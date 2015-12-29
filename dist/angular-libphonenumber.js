@@ -26,6 +26,14 @@ angular.module('cwill747.phonenumber', [])
       return value.replace(/([^0-9|+])/g, '');
     }
 
+    function trimTrailingWhitespaces(value) {
+        if (!value) {
+            return value;
+        }
+
+        return value.replace(/\s+$/g, '')
+    }
+
     function applyPhoneMask(value, region) {
       var phoneMask = value;
       try {
@@ -97,7 +105,7 @@ angular.module('cwill747.phonenumber', [])
           else {
             formattedValue = cleanValue;
           }
-          return formattedValue;
+          return trimTrailingWhitespaces(formattedValue);
         }
 
         function validator(value) {
